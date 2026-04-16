@@ -36,7 +36,7 @@ html {
   --font-body: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
 
   /* Layout */
-  --container: 1180px;
+  --container: 880px;
   --gutter: 1.25rem;
 
   /* Shadows */
@@ -174,32 +174,21 @@ section { padding: 4rem 0; }
 }
 
 .header-badge {
-  background: var(--cream);
-  border: 1px solid var(--line);
-  padding: 0.5rem 0.85rem;
-  text-align: center;
-  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
 }
 
-.header-badge .small {
-  font-size: 0.65rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--muted);
-  font-weight: 600;
-}
-
-.header-badge .big {
-  font-family: var(--font-display);
-  font-size: 0.85rem;
-  color: var(--navy);
-  font-weight: 700;
-  letter-spacing: 0.05em;
+.icbc-badge-img {
+  height: 54px;
+  width: auto;
+  display: block;
 }
 
 /* --- Icon Navigation (inspired by original Bavarian) --- */
 .main-nav {
-  background: var(--navy);
+  background: var(--navy-dark);
+  border-bottom: 3px solid var(--yellow);
 }
 
 .main-nav .container {
@@ -229,8 +218,8 @@ section { padding: 4rem 0; }
 .main-nav a:last-child { border-right: none; }
 
 .main-nav a .nav-icon {
-  width: 28px;
-  height: 28px;
+  width: 38px;
+  height: 38px;
   stroke: currentColor;
   fill: none;
   stroke-width: 1.8;
@@ -315,7 +304,7 @@ section { padding: 4rem 0; }
     border-bottom: 1px solid rgba(255,255,255,0.1);
   }
 
-  .main-nav a .nav-icon { width: 22px; height: 22px; }
+  .main-nav a .nav-icon { width: 28px; height: 28px; }
 
   .main-nav a .nav-sub { display: none; }
 
@@ -889,23 +878,16 @@ section { padding: 4rem 0; }
 }
 
 .icbc-callout .badge-icon {
-  width: 80px; height: 80px;
-  background: rgba(245,180,0,0.2);
-  border: 2px solid var(--yellow);
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
 
-.icbc-callout .badge-icon svg {
-  width: 44px; height: 44px;
-  stroke: var(--yellow);
-  fill: none;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+.icbc-callout .badge-icon img {
+  height: 80px;
+  width: auto;
+  display: block;
 }
 
 .icbc-callout h3 {

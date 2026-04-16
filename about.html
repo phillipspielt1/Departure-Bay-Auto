@@ -33,8 +33,7 @@
         </a>
         <div class="header-contact">
           <div class="header-badge">
-            <div class="small">ICBC</div>
-            <div class="big">Inspection Facility</div>
+            <img src="images/icbc-dif.svg" alt="ICBC Designated Inspection Facility" class="icbc-badge-img">
           </div>
           <div class="header-info">
             <a href="tel:2507589312" class="phone">250-758-9312</a>
@@ -167,53 +166,75 @@
 
         <div class="two-col-visual">
           <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-            <rect width="400" height="300" fill="#0f2d52"/>
             <defs>
-              <radialGradient id="spotlight2" cx="50%" cy="50%" r="60%">
-                <stop offset="0%" stop-color="#1e4378" stop-opacity="0.7"/>
-                <stop offset="100%" stop-color="#0a1f3a" stop-opacity="1"/>
-              </radialGradient>
+              <linearGradient id="inspBg" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#0a1f3a"/>
+                <stop offset="100%" stop-color="#0f2d52"/>
+              </linearGradient>
             </defs>
-            <rect width="400" height="300" fill="url(#spotlight2)"/>
+            <rect width="400" height="300" fill="url(#inspBg)"/>
 
-            <!-- Gear icons -->
-            <g stroke="#f5b400" stroke-width="2" fill="none" opacity="0.9">
-              <!-- Large gear -->
-              <g transform="translate(200,150)">
-                <circle r="50"/>
-                <circle r="20"/>
-                <g>
-                  <rect x="-6" y="-62" width="12" height="14"/>
-                  <rect x="-6" y="48" width="12" height="14"/>
-                  <rect x="48" y="-6" width="14" height="12"/>
-                  <rect x="-62" y="-6" width="14" height="12"/>
-                  <rect x="-6" y="-62" width="12" height="14" transform="rotate(45)"/>
-                  <rect x="-6" y="48" width="12" height="14" transform="rotate(45)"/>
-                  <rect x="48" y="-6" width="14" height="12" transform="rotate(45)"/>
-                  <rect x="-62" y="-6" width="14" height="12" transform="rotate(45)"/>
-                </g>
-              </g>
+            <!-- Car silhouette (side view, left-positioned) -->
+            <g stroke="rgba(255,255,255,0.7)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <!-- Upper profile -->
+              <path d="M 28,170 Q 32,162 46,158 L 74,150 Q 82,145 90,143 Q 100,132 112,130 L 168,129 Q 180,129 188,138 L 192,144 Q 200,146 216,152 Q 222,156 224,161 L 228,172"/>
+              <!-- Front face -->
+              <line x1="28" y1="170" x2="28" y2="180"/>
+              <!-- Lower body with wheel arches -->
+              <path d="M 28,180 L 52,180 Q 52,170 62,170 Q 72,170 72,180 L 176,180 Q 176,170 186,170 Q 196,170 196,180 L 228,180"/>
+              <!-- Beltline -->
+              <line x1="90" y1="150" x2="190" y2="149"/>
+              <!-- B-pillar -->
+              <line x1="128" y1="130" x2="128" y2="150"/>
+            </g>
+            <!-- Wheels -->
+            <circle cx="62" cy="186" r="12" fill="#0a1f3a" stroke="rgba(255,255,255,0.65)" stroke-width="2"/>
+            <circle cx="62" cy="186" r="4" fill="rgba(255,255,255,0.15)"/>
+            <circle cx="186" cy="186" r="12" fill="#0a1f3a" stroke="rgba(255,255,255,0.65)" stroke-width="2"/>
+            <circle cx="186" cy="186" r="4" fill="rgba(255,255,255,0.15)"/>
 
-              <!-- Small gear -->
-              <g transform="translate(320,90)" opacity="0.6">
-                <circle r="25"/>
-                <circle r="10"/>
-                <g>
-                  <rect x="-3" y="-32" width="6" height="8"/>
-                  <rect x="-3" y="24" width="6" height="8"/>
-                  <rect x="24" y="-3" width="8" height="6"/>
-                  <rect x="-32" y="-3" width="8" height="6"/>
-                </g>
-              </g>
+            <!-- Magnifying glass over front of car -->
+            <circle cx="50" cy="158" r="22" fill="none" stroke="#f5b400" stroke-width="2.5" opacity="0.7"/>
+            <line x1="66" y1="174" x2="76" y2="184" stroke="#f5b400" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+            <!-- Highlight inside lens -->
+            <circle cx="50" cy="158" r="22" fill="rgba(245,180,0,0.05)"/>
 
-              <!-- Another small gear -->
-              <g transform="translate(80,220)" opacity="0.5">
-                <circle r="20"/>
-                <circle r="8"/>
-              </g>
+            <!-- Clipboard / checklist (right side) -->
+            <rect x="252" y="50" width="122" height="190" fill="white" opacity="0.07" rx="4"/>
+            <rect x="252" y="50" width="122" height="190" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" rx="4"/>
+            <!-- Clipboard clip at top -->
+            <rect x="295" y="44" width="36" height="16" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1.5" rx="3"/>
+            <!-- Heading -->
+            <text x="313" y="84" text-anchor="middle" fill="#f5b400" font-family="Barlow Condensed, Impact, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">INSPECTION</text>
+            <text x="313" y="98" text-anchor="middle" fill="#f5b400" font-family="Barlow Condensed, Impact, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">CHECKLIST</text>
+            <line x1="264" y1="106" x2="362" y2="106" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+
+            <!-- Checklist items -->
+            <g font-family="Source Sans 3, Arial, sans-serif" font-size="12" fill="rgba(255,255,255,0.75)">
+              <!-- Brakes -->
+              <rect x="266" y="116" width="14" height="14" rx="2" fill="#f5b400"/>
+              <text x="272" y="127" text-anchor="middle" fill="#0a1f3a" font-size="10" font-weight="700">✓</text>
+              <text x="290" y="128">Brakes</text>
+              <!-- Lights -->
+              <rect x="266" y="138" width="14" height="14" rx="2" fill="#f5b400"/>
+              <text x="272" y="149" text-anchor="middle" fill="#0a1f3a" font-size="10" font-weight="700">✓</text>
+              <text x="290" y="150">Lights &amp; Signals</text>
+              <!-- Steering -->
+              <rect x="266" y="160" width="14" height="14" rx="2" fill="#f5b400"/>
+              <text x="272" y="171" text-anchor="middle" fill="#0a1f3a" font-size="10" font-weight="700">✓</text>
+              <text x="290" y="172">Steering</text>
+              <!-- Fluids -->
+              <rect x="266" y="182" width="14" height="14" rx="2" fill="#f5b400"/>
+              <text x="272" y="193" text-anchor="middle" fill="#0a1f3a" font-size="10" font-weight="700">✓</text>
+              <text x="290" y="194">Fluids &amp; Filters</text>
+              <!-- Tires -->
+              <rect x="266" y="204" width="14" height="14" rx="2" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+              <text x="290" y="216">Tires &amp; Wheels</text>
             </g>
 
-            <text x="200" y="275" text-anchor="middle" fill="#ffffff" font-family="Barlow Condensed, Impact, sans-serif" font-size="16" font-weight="600" letter-spacing="4">PROPER MAINTENANCE = LONGER LIFE</text>
+            <!-- Bottom label -->
+            <text x="200" y="262" text-anchor="middle" fill="#f5b400" font-family="Barlow Condensed, Impact, sans-serif" font-size="14" font-weight="700" letter-spacing="3">ICBC DESIGNATED FACILITY</text>
+            <text x="200" y="278" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-family="Barlow Condensed, Impact, sans-serif" font-size="10" letter-spacing="2">THOROUGH · HONEST · PROFESSIONAL</text>
           </svg>
         </div>
       </div>
